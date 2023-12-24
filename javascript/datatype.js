@@ -26,3 +26,5 @@ console.log(typeof(bigno));//bigint
 console.log(typeof(myobj));//object
 console.log(typeof(myfun));//function
 
+
+
