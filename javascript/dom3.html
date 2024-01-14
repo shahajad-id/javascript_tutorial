@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: white;">
+     
+</body>
+
+<script>
+const div=document.createElement('div')//can creat  h1 or span any elemnt
+
+console.log(div);
+div.className='main';// it will take value from there and override 
+
+div.id=Math.round(Math.random()*10)
+
+//we can use setattribute prefer direct set value
+div.setAttribute("class",'generatedtitle')
+div.style.backgroundcolor='green';
+div.style.padding='10px';
+div.style.backgroundColor='blue'
+div.innerHTML='hello';
+div.innerText="what is your name"
+
+// another way prefer it ->
+const addtext=document.createTextNode('chai aur code');
+div.appendChild(addtext);
+
+//to attach into document to show on page
+document.body.appendChild(div);
+
+
+
+
+
+
+</script>
+</html>
