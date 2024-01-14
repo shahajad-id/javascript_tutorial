@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: white;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+   
+</body>
+
+<script>// to add element
+    function addlanguage(langname){
+        
+          const li=document.createElement('li');
+          li.innerHTML=`${langname}`
+           
+          document.querySelector('.language').appendChild(li)
+
+    }
+    addlanguage('python')
+    addlanguage('typescript')
+
+    // optimize approach to add element
+   
+   function addlangopti(langname){
+    const li=document.createElement('li');
+     li.appendChild(document.createTextNode(`new lang: ${langname}`));
+     document.querySelector('.language').appendChild(li);
+
+     //if you want to add in body then docu.body.appchid(li)
+
+     //const text=document.createTextNode(langname);
+     //li.appendChild(text);
+
+   }
+   addlangopti('c++')
+   addlangopti('nodejs')
+
+                // for edit the value
+   const secondlang=document.querySelector('li:nth-child(2)');
+   //secondlang.innerHTML='newpython'  no need next step
+   // secondlang.textContent='newpython'; or 
+   const newli=document.createElement('li'); 
+   //newli.textContent='newpython' or
+   newli.appendChild(document.createTextNode('newpython'));
+
+   secondlang.replaceWith(newli);
+
+// another way edit
+const firstlang=document.querySelector('li:first-child')
+firstlang.outerHTML='<li>newtypescript</li>';//we have to write whole li
+
+
+//remove
+const last=document.querySelector('li:last-child');
+last.remove();
+
+   
+</script>
+</html>
